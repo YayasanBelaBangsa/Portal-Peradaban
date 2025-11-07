@@ -3,212 +3,79 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Portal Peradaban - Yayasan Bela Bangsa</title>
-  <meta name="description" content="Platform opini tentang pendidikan, sosial, dan budaya lokal Jember." />
-  <meta name="keywords" content="pendidikan, sosial, budaya, opini, Jember, Yayasan Bela Bangsa" />
-  <meta name="author" content="Yayasan Bela Bangsa" />
-  <meta name="robots" content="index, follow" />
-  <meta name="revisit-after" content="7 days" />
-
-  <!-- Open Graph & Twitter Cards -->
-  <meta property="og:title" content="Portal Peradaban - Yayasan Bela Bangsa" />
-  <meta property="og:description" content="Platform opini tentang pendidikan, sosial, dan budaya lokal" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://yayasanbelabangsa.github.io/Portal-Peradaban" />
-  <meta property="og:image" content="https://yayasanbelabangsa.github.io/Portal-Peradaban/images/og-image.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Portal Peradaban - Yayasan Bela Bangsa" />
-  <meta name="twitter:description" content="Platform opini tentang pendidikan, sosial, dan budaya lokal" />
-  <meta name="twitter:image" content="https://yayasanbelabangsa.github.io/Portal-Peradaban/images/og-image.png" />
-
-  <link rel="canonical" href="https://yayasanbelabangsa.github.io/Portal-Peradaban" />
-  <link rel="icon" type="image/png" href="images/favicon.ico" />
-  <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
-
-  <link rel="stylesheet" href="css/style.css" />
+  <meta name="description" content="Portal Opini Profesional - Tempat berbagi dan membaca opini berkualitas" />
+  <title>Portal Opini Profesional</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.ico" />
 </head>
 <body>
-  <!-- Skip link for accessibility -->
-  <a href="#main-content" class="skip-link">Skip to main content</a>
-
-  <header class="header" role="banner">
-    <nav class="navbar container" role="navigation" aria-label="Main navigation">
-      <div class="logo" aria-label="Logo Yayasan Bela Bangsa">
-        <img src="images/logo.jpg" alt="Logo Yayasan Bela Bangsa" width="60" height="60" class="logo-img" />
-        <div class="logo-text">
-          <h1>YAYASAN BELA BANGSA</h1>
-          <p class="tagline">Portal Peradaban</p>
-        </div>
-      </div>
-
-      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-      </button>
-
-      <ul class="nav-menu" id="navMenu">
-        <li><a href="#" class="nav-link active" data-page="home">Home</a></li>
-        <li><a href="#" class="nav-link" data-category="Pendidikan">Pendidikan</a></li>
-        <li><a href="#" class="nav-link" data-category="Sosial">Sosial</a></li>
-        <li><a href="#" class="nav-link" data-category="Budaya">Budaya</a></li>
-        <li><a href="#" class="nav-link" data-page="about">Tentang</a></li>
-        <li><a href="#" class="nav-link" data-page="contact">Kontak</a></li>
-      </ul>
-    </nav>
+  <header>
+    <div class="container">
+      <h1>Portal Opini Profesional</h1>
+      <nav>
+        <ul>
+          <li><a href="#latest">Terbaru</a></li>
+          <li><a href="#categories">Kategori</a></li>
+          <li><a href="#about">Tentang</a></li>
+          <li><a href="#contact">Kontak</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <section class="hero" role="region" aria-label="Hero section">
-    <div class="container">
-      <div class="hero-content">
-        <h2>Portal Peradaban</h2>
-        <p>Platform berbagi opini tentang pendidikan, isu sosial, dan pelestarian budaya lokal</p>
-      </div>
-    </div>
-  </section>
+  <main>
+    <section id="latest" class="container">
+      <h2>Tulisan Opini Terbaru</h2>
 
-  <main class="container" role="main" id="main-content" tabindex="-1">
-    <!-- Featured Articles -->
-    <section class="featured-articles" aria-label="Featured articles">
-      <h2>Artikel Unggulan</h2>
-      <div class="articles-grid" id="featuredArticles">
-        <!-- Rendered by JavaScript -->
-      </div>
-    </section>
-
-    <!-- Category Section -->
-    <section class="category-section" id="categorySection" aria-label="Articles by category" hidden>
-      <h2 id="categoryTitle"></h2>
-      <div class="articles-grid" id="categoryArticles"></div>
-    </section>
-
-    <!-- Article Detail -->
-    <section class="article-detail" id="articleDetail" aria-label="Article detail" hidden>
-      <button class="back-btn" id="backBtn" aria-label="Kembali ke halaman sebelumnya">Kembali</button>
-      <article>
-        <img src="" id="articleImage" alt="" class="article-image" />
-        <h1 id="articleTitle"></h1>
-        <div class="article-meta">
-          <div class="meta-info">
-            <span class="category-badge" id="articleCategory"></span>
-            <span id="articleDate"></span>
-            <span id="articleReadTime"></span>
-          </div>
-          <div class="authors-info">
-            <strong>Penulis: </strong><span id="articleAuthors"></span>
-          </div>
-        </div>
-        <div class="article-content" id="articleContent"></div>
-        <div class="article-share" aria-label="Bagikan artikel">
-          <h3>Bagikan Artikel</h3>
-          <div class="share-buttons">
-            <a href="#" class="share-btn facebook" target="_blank" rel="noopener noreferrer" aria-label="Bagikan ke Facebook">Facebook</a>
-            <a href="#" class="share-btn twitter" target="_blank" rel="noopener noreferrer" aria-label="Bagikan ke Twitter">Twitter</a>
-            <a href="#" class="share-btn whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Bagikan ke WhatsApp">WhatsApp</a>
-            <a href="#" class="share-btn linkedin" target="_blank" rel="noopener noreferrer" aria-label="Bagikan ke LinkedIn">LinkedIn</a>
-          </div>
-        </div>
-        <h3>Artikel Terkait</h3>
-        <div class="articles-grid" id="relatedArticles"></div>
+      <!-- Contoh Artikel Opini -->
+      <article class="post">
+        <h3>Peran Opini dalam Demokrasi Modern</h3>
+        <p>Opini adalah bagian penting yang memungkinkan masyarakat menyuarakan pendapatnya dalam demokrasi. <a href="#">Baca selengkapnya</a></p>
+      </article>
+      <article class="post">
+        <h3>Menggali Akar Sosial melalui Tulisan Opini</h3>
+        <p>Tulisan opini bisa menjadi jembatan memahami permasalahan sosial lebih mendalam. <a href="#">Baca selengkapnya</a></p>
       </article>
     </section>
 
-    <!-- About Section -->
-    <section class="about-page" id="aboutPage" aria-label="About us" hidden>
-      <div class="about-header">
-        <h1>Tentang Kami</h1>
-        <p class="subtitle">Yayasan Pendidikan Sosial Bela Bangsa</p>
-      </div>
-      <div class="about-content">
-        <section class="about-section">
-          <h2>Profil Yayasan</h2>
-          <p>Yayasan Pendidikan Sosial Bela Bangsa adalah organisasi yang berkomitmen ...</p>
-        </section>
-        <section class="about-section">
-          <h2>Visi</h2>
-          <p>Menjadi yayasan terdepan dalam pengembangan pendidikan, sosial, dan budaya ...</p>
-        </section>
-        <section class="about-section">
-          <h2>Misi</h2>
-          <ul>
-            <li>Menyelenggarakan program pendidikan yang inovatif dan berkualitas</li>
-            <li>Memfasilitasi pemberdayaan masyarakat melalui program sosial</li>
-            <li>Melestarikan dan mengembangkan budaya lokal</li>
-            <li>Membangun kolaborasi dengan berbagai pihak untuk kemajuan bersama</li>
-          </ul>
-        </section>
-      </div>
-      <button class="back-btn" id="backBtnAbout" aria-label="Kembali ke halaman sebelumnya">Kembali</button>
+    <section id="categories" class="container">
+      <h2>Kategori</h2>
+      <ul class="categories-list" aria-label="Daftar Kategori">
+        <li><a href="#" title="Politik">Politik</a></li>
+        <li><a href="#" title="Sosial">Sosial</a></li>
+        <li><a href="#" title="Ekonomi">Ekonomi</a></li>
+        <li><a href="#" title="Budaya">Budaya</a></li>
+      </ul>
     </section>
 
-    <!-- Contact Section -->
-    <section class="contact-page" id="contactPage" aria-label="Contact us" hidden>
-      <div class="contact-header">
-        <h1>Hubungi Kami</h1>
-        <p class="subtitle">Kami siap mendengarkan masukan dan pertanyaan Anda</p>
-      </div>
-      <div class="contact-content">
-        <form id="contactForm" class="contact-form" novalidate>
-          <div class="form-group">
-            <label for="name">Nama Lengkap <span aria-label="required">*</span></label>
-            <input type="text" id="name" name="name" required aria-required="true" />
-          </div>
-          <div class="form-group">
-            <label for="email">Email <span aria-label="required">*</span></label>
-            <input type="email" id="email" name="email" required aria-required="true" />
-          </div>
-          <div class="form-group">
-            <label for="subject">Subjek <span aria-label="required">*</span></label>
-            <input type="text" id="subject" name="subject" required aria-required="true" />
-          </div>
-          <div class="form-group">
-            <label for="message">Pesan <span aria-label="required">*</span></label>
-            <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary">Kirim Pesan</button>
-        </form>
-        <div class="contact-info">
-          <h2>Informasi Kontak</h2>
-          <p><strong>Alamat:</strong> Jl. Raya Kencong, Jember, Jawa Timur</p>
-          <p><strong>Telepon:</strong> <a href="tel:+6281234567862">+62 812-345-678</a></p>
-          <p><strong>Email:</strong> <a href="mailto:infoyayasanbelabangsa.or.id">infoyayasanbelabangsa.or.id</a></p>
-        </div>
-      </div>
-      <button class="back-btn" id="backBtnContact" aria-label="Kembali ke halaman sebelumnya">Kembali</button>
+    <section id="about" class="container">
+      <h2>Tentang Kami</h2>
+      <p>Portal Opini Profesional didedikasikan untuk menyajikan tulisan opini berkualitas dari penulis yang berkomitmen memberikan sudut pandang informatif dan inspiratif.</p>
+    </section>
+
+    <section id="contact" class="container">
+      <h2>Kontak Kami</h2>
+      <form id="contact-form" aria-label="Form Kontak">
+        <label for="name">Nama:</label>
+        <input type="text" id="name" name="name" required aria-required="true" placeholder="Masukkan nama Anda" />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required aria-required="true" placeholder="Masukkan email Anda" />
+
+        <label for="message">Pesan:</label>
+        <textarea id="message" name="message" required aria-required="true" placeholder="Tulis pesan Anda"></textarea>
+
+        <button type="submit" aria-label="Kirim Pesan">Kirim</button>
+      </form>
     </section>
   </main>
 
-  <footer class="footer" role="contentinfo">
-    <div class="container footer-content">
-      <div class="footer-section">
-        <h3>Tentang</h3>
-        <p>Yayasan Pendidikan Sosial Bela Bangsa adalah platform opini untuk berbagi pemikiran tentang pendidikan, sosial, dan budaya lokal.</p>
-      </div>
-      <div class="footer-section">
-        <h3>Link Penting</h3>
-        <ul>
-          <li><a href="#" data-page="home">Home</a></li>
-          <li><a href="#" data-page="about">Tentang</a></li>
-          <li><a href="#" data-page="contact">Kontak</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h3>Kategori</h3>
-        <ul>
-          <li><a href="#" data-category="Pendidikan">Pendidikan</a></li>
-          <li><a href="#" data-category="Sosial">Sosial</a></li>
-          <li><a href="#" data-category="Budaya">Budaya</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom container">
-      <p>© 2025 Yayasan Bela Bangsa - Kencong, Jember. All rights reserved.</p>
-      <a href="sitemap.xml">Sitemap</a>
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Portal Opini Profesional. All rights reserved.</p>
     </div>
   </footer>
 
-  <button id="backToTop" class="back-to-top" aria-label="Back to top">▲</button>
-
-  <script src="js/main.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
