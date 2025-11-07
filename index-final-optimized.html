@@ -2,14 +2,15 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portal Peradaban - Yayasan Bela Bangsa</title>
   <meta name="description" content="Platform opini tentang pendidikan, sosial, dan budaya lokal Jember." />
   <meta name="keywords" content="pendidikan, sosial, budaya, opini, Jember, Yayasan Bela Bangsa" />
   <meta name="author" content="Yayasan Bela Bangsa" />
   <meta name="robots" content="index, follow" />
   <meta name="revisit-after" content="7 days" />
-  <!-- Open Graph dan Twitter Cards -->
+
+  <!-- Open Graph & Twitter Cards -->
   <meta property="og:title" content="Portal Peradaban - Yayasan Bela Bangsa" />
   <meta property="og:description" content="Platform opini tentang pendidikan, sosial, dan budaya lokal" />
   <meta property="og:type" content="website" />
@@ -19,49 +20,44 @@
   <meta name="twitter:title" content="Portal Peradaban - Yayasan Bela Bangsa" />
   <meta name="twitter:description" content="Platform opini tentang pendidikan, sosial, dan budaya lokal" />
   <meta name="twitter:image" content="https://yayasanbelabangsa.github.io/Portal-Peradaban/images/og-image.png" />
+
   <link rel="canonical" href="https://yayasanbelabangsa.github.io/Portal-Peradaban" />
-  <!-- Favicon dan Apple touch icon -->
   <link rel="icon" type="image/png" href="images/favicon.ico" />
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
-  <!-- Stylesheet -->
+
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <!-- Skip to main content link for accessibility -->
+  <!-- Skip link for accessibility -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <!-- Header & Navigation -->
   <header class="header" role="banner">
-    <div class="container">
-      <nav class="navbar" role="navigation" aria-label="Main navigation">
-        <!-- Logo -->
-        <div class="logo">
-          <img src="images/logo.jpg" alt="Logo Yayasan Bela Bangsa" width="60" height="60" class="logo-img" />
-          <div class="logo-text">
-            <h1>YAYASAN BELA BANGSA</h1>
-            <p class="tagline">Portal Peradaban</p>
-          </div>
+    <nav class="navbar container" role="navigation" aria-label="Main navigation">
+      <div class="logo" aria-label="Logo Yayasan Bela Bangsa">
+        <img src="images/logo.jpg" alt="Logo Yayasan Bela Bangsa" width="60" height="60" class="logo-img" />
+        <div class="logo-text">
+          <h1>YAYASAN BELA BANGSA</h1>
+          <p class="tagline">Portal Peradaban</p>
         </div>
-        <!-- Hamburger menu for mobile -->
-        <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-        </button>
-        <!-- Navigation Menu -->
-        <ul class="nav-menu" id="navMenu">
-          <li><a href="#" class="nav-link active" data-page="home">Home</a></li>
-          <li><a href="#" class="nav-link" data-category="Pendidikan">Pendidikan</a></li>
-          <li><a href="#" class="nav-link" data-category="Sosial">Sosial</a></li>
-          <li><a href="#" class="nav-link" data-category="Budaya">Budaya</a></li>
-          <li><a href="#" class="nav-link" data-page="about">Tentang</a></li>
-          <li><a href="#" class="nav-link" data-page="contact">Kontak</a></li>
-        </ul>
-      </nav>
-    </div>
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#" class="nav-link active" data-page="home">Home</a></li>
+        <li><a href="#" class="nav-link" data-category="Pendidikan">Pendidikan</a></li>
+        <li><a href="#" class="nav-link" data-category="Sosial">Sosial</a></li>
+        <li><a href="#" class="nav-link" data-category="Budaya">Budaya</a></li>
+        <li><a href="#" class="nav-link" data-page="about">Tentang</a></li>
+        <li><a href="#" class="nav-link" data-page="contact">Kontak</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <!-- Hero Section -->
   <section class="hero" role="region" aria-label="Hero section">
     <div class="container">
       <div class="hero-content">
@@ -71,29 +67,26 @@
     </div>
   </section>
 
-  <!-- Main content -->
-  <main class="container" id="main-content" tabindex="-1" role="main">
+  <main class="container" role="main" id="main-content" tabindex="-1">
     <!-- Featured Articles -->
     <section class="featured-articles" aria-label="Featured articles">
       <h2>Artikel Unggulan</h2>
       <div class="articles-grid" id="featuredArticles">
-        <!-- Artikel unggulan dirender oleh JavaScript -->
+        <!-- Rendered by JavaScript -->
       </div>
     </section>
 
-    <!-- Category Section (hidden by default) -->
-    <section class="category-section" id="categorySection" style="display:none;" aria-label="Articles by category">
+    <!-- Category Section -->
+    <section class="category-section" id="categorySection" aria-label="Articles by category" hidden>
       <h2 id="categoryTitle"></h2>
-      <div class="articles-grid" id="categoryArticles">
-        <!-- Artikel per kategori dirender oleh JavaScript -->
-      </div>
+      <div class="articles-grid" id="categoryArticles"></div>
     </section>
 
-    <!-- Single Article Detail (hidden by default) -->
-    <section class="article-detail" id="articleDetail" style="display:none;" aria-label="Article detail">
+    <!-- Article Detail -->
+    <section class="article-detail" id="articleDetail" aria-label="Article detail" hidden>
       <button class="back-btn" id="backBtn" aria-label="Kembali ke halaman sebelumnya">Kembali</button>
       <article>
-        <img id="articleImage" src="" alt="" class="article-image" />
+        <img src="" id="articleImage" alt="" class="article-image" />
         <h1 id="articleTitle"></h1>
         <div class="article-meta">
           <div class="meta-info">
@@ -116,14 +109,12 @@
           </div>
         </div>
         <h3>Artikel Terkait</h3>
-        <div class="articles-grid" id="relatedArticles">
-          <!-- Artikel terkait dirender oleh JavaScript -->
-        </div>
+        <div class="articles-grid" id="relatedArticles"></div>
       </article>
     </section>
 
-    <!-- About us section (hidden by default) -->
-    <section class="about-page" id="aboutPage" style="display:none;" aria-label="About us">
+    <!-- About Section -->
+    <section class="about-page" id="aboutPage" aria-label="About us" hidden>
       <div class="about-header">
         <h1>Tentang Kami</h1>
         <p class="subtitle">Yayasan Pendidikan Sosial Bela Bangsa</p>
@@ -150,79 +141,74 @@
       <button class="back-btn" id="backBtnAbout" aria-label="Kembali ke halaman sebelumnya">Kembali</button>
     </section>
 
-    <!-- Contact Page (hidden by default) -->
-    <section class="contact-page" id="contactPage" style="display:none;" aria-label="Contact us">
+    <!-- Contact Section -->
+    <section class="contact-page" id="contactPage" aria-label="Contact us" hidden>
       <div class="contact-header">
         <h1>Hubungi Kami</h1>
         <p class="subtitle">Kami siap mendengarkan masukan dan pertanyaan Anda</p>
       </div>
       <div class="contact-content">
-        <form class="contact-form" id="contactForm" novalidate>
+        <form id="contactForm" class="contact-form" novalidate>
           <div class="form-group">
             <label for="name">Nama Lengkap <span aria-label="required">*</span></label>
-            <input type="text" id="name" name="name" class="form-control" required aria-required="true" />
+            <input type="text" id="name" name="name" required aria-required="true" />
           </div>
           <div class="form-group">
             <label for="email">Email <span aria-label="required">*</span></label>
-            <input type="email" id="email" name="email" class="form-control" required aria-required="true" />
+            <input type="email" id="email" name="email" required aria-required="true" />
           </div>
           <div class="form-group">
             <label for="subject">Subjek <span aria-label="required">*</span></label>
-            <input type="text" id="subject" name="subject" class="form-control" required aria-required="true" />
+            <input type="text" id="subject" name="subject" required aria-required="true" />
           </div>
           <div class="form-group">
             <label for="message">Pesan <span aria-label="required">*</span></label>
-            <textarea id="message" name="message" rows="5" class="form-control" required aria-required="true"></textarea>
+            <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
           </div>
           <button type="submit" class="btn btn-primary">Kirim Pesan</button>
         </form>
         <div class="contact-info">
           <h2>Informasi Kontak</h2>
-          <div class="info-item"><strong>Alamat:</strong> Jl. Raya Kencong, Jember, Jawa Timur</div>
-          <div class="info-item"><strong>Telepon:</strong> <a href="tel:+6281234567862">+62 812-345-678</a></div>
-          <div class="info-item"><strong>Email:</strong> <a href="mailto:infoyayasanbelabangsa.or.id">infoyayasanbelabangsa.or.id</a></div>
+          <p><strong>Alamat:</strong> Jl. Raya Kencong, Jember, Jawa Timur</p>
+          <p><strong>Telepon:</strong> <a href="tel:+6281234567862">+62 812-345-678</a></p>
+          <p><strong>Email:</strong> <a href="mailto:infoyayasanbelabangsa.or.id">infoyayasanbelabangsa.or.id</a></p>
         </div>
       </div>
       <button class="back-btn" id="backBtnContact" aria-label="Kembali ke halaman sebelumnya">Kembali</button>
     </section>
   </main>
 
-  <!-- Footer -->
   <footer class="footer" role="contentinfo">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-section">
-          <h3>Tentang</h3>
-          <p>Yayasan Pendidikan Sosial Bela Bangsa adalah platform opini untuk berbagi pemikiran tentang pendidikan, sosial, dan budaya lokal.</p>
-        </div>
-        <div class="footer-section">
-          <h3>Link Penting</h3>
-          <ul>
-            <li><a href="#" data-page="home">Home</a></li>
-            <li><a href="#" data-page="about">Tentang</a></li>
-            <li><a href="#" data-page="contact">Kontak</a></li>
-          </ul>
-        </div>
-        <div class="footer-section">
-          <h3>Kategori</h3>
-          <ul>
-            <li><a href="#" data-category="Pendidikan">Pendidikan</a></li>
-            <li><a href="#" data-category="Sosial">Sosial</a></li>
-            <li><a href="#" data-category="Budaya">Budaya</a></li>
-          </ul>
-        </div>
+    <div class="container footer-content">
+      <div class="footer-section">
+        <h3>Tentang</h3>
+        <p>Yayasan Pendidikan Sosial Bela Bangsa adalah platform opini untuk berbagi pemikiran tentang pendidikan, sosial, dan budaya lokal.</p>
       </div>
-      <div class="footer-bottom">
-        <p>© 2025 Yayasan Bela Bangsa - Kencong, Jember. All rights reserved.</p>
-        <a href="sitemap.xml">Sitemap</a>
+      <div class="footer-section">
+        <h3>Link Penting</h3>
+        <ul>
+          <li><a href="#" data-page="home">Home</a></li>
+          <li><a href="#" data-page="about">Tentang</a></li>
+          <li><a href="#" data-page="contact">Kontak</a></li>
+        </ul>
       </div>
+      <div class="footer-section">
+        <h3>Kategori</h3>
+        <ul>
+          <li><a href="#" data-category="Pendidikan">Pendidikan</a></li>
+          <li><a href="#" data-category="Sosial">Sosial</a></li>
+          <li><a href="#" data-category="Budaya">Budaya</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <p>© 2025 Yayasan Bela Bangsa - Kencong, Jember. All rights reserved.</p>
+      <a href="sitemap.xml">Sitemap</a>
     </div>
   </footer>
 
-  <!-- Back to top button -->
-  <button class="back-to-top" id="backToTop" aria-label="Back to top">▲</button>
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">▲</button>
 
-  <!-- JavaScript -->
   <script src="js/main.js"></script>
 </body>
 </html>
